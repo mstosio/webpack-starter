@@ -9,7 +9,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "bundle"),
-    filename: "main.[contentHash].js" //generates different hash preveting for cacheing
+    filename: "[name].[contentHash].js" //generates different hash preveting for cacheing
   },
   devServer: {
     contentBase: "./"
@@ -29,18 +29,6 @@ module.exports = {
       {
         test: /\.scss$/,
         use: ["style-loader", "css-loader", "resolve-url-loader", "sass-loader"] // those take care of loading css and putting styles into head
-      },
-      {
-        test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/, //url-loader takes care of loading images properly
-        use: [
-          {
-          loader: 'url-loader',
-          options: {
-            limit: 1000, // if less than 10 kb, add base64 encoded image to css
-            publicPath: '/bundle',
-            name: "assets/[hash].[ext]" // if more than 10 kb move to this folder in build using file-loader
-          }
-        }]
       },
       {
         test: /\.html$/,
