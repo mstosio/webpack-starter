@@ -1,16 +1,28 @@
 ## Webpack starter pack for small projects
 
-That's my basic starter Webpack starter pack for small projects. Includes Babel, Sass-Loader, File-loader, url-loader, CleanWebpackPlugin which prevents from overloaded cache. 
+That's my basic starter Webpack starter pack for small projects. 
 
-In order to run webpack type:
+
+Includes, CleanWebpackPlugin which prevents from overloaded cache. 
+
+- Babel
+- Sass-Loader
+- File-loader
+- CleanWebpackPlugin
+- OptimizeCssAssetsPlugin
+- MiniCssExtractPlugin
+- HtmlWebpackPlugin
+-BrowserSyncPlugin
+
+In order to run webpack development mode:
 
 ```
 npm start 
 ```
 
-In order to run webpack dev server: 
+In order to build production version: 
 ```
-npm run dev
+npm run build
 ```
 
 For auto formatiing all code:
