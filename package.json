@@ -1,0 +1,40 @@
+{
+  "name": "nieruchomosci",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "start": "webpack-dev-server --watch --development --open",
+    "dev": "webpack --mode development --watch",
+    "format": "prettier --write \"**/*.{html,css,scss,js}\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^4.3.1",
+    "css-loader": "^3.2.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.12.0",
+    "prettier": "^1.18.2",
+    "resolve-url-loader": "^3.1.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "dependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.7",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "file-loader": "^4.2.0",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0",
+    "url-loader": "^2.1.0"
+  }
+}
