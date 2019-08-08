@@ -1,9 +1,9 @@
 ## Webpack starter pack for small projects
 
-That's my basic starter Webpack starter pack for small projects. 
+That's my basic Webpack starter pack for small projects. 
 
 
-Includes, CleanWebpackPlugin which prevents from overloaded cache. 
+Includes:
 
 - Babel
 - Sass-Loader
