@@ -5,11 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
-    index: "./assets/js/index.js" // if u want to add another js file just add new line
-  },
-  output: {
-    path: path.resolve(__dirname, "bundle"),
-    filename: "[name].[contentHash].js" //generates different hash preveting for cacheing
+    index: "./src/js/index.js" // if u want to add another js file just add new line
   },
   devServer: {
     contentBase: "./"
@@ -40,7 +36,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: "[name].[hash].[ext]",
+              name: "[hash].[ext]",
               outputPath: "assets"
             }
           },
@@ -54,8 +50,8 @@ module.exports = {
       port: 8080,
       files: [
         "./*.html",
-        "./assets/css/*.css",
-        "./assets/js/*.js",
+        "./src/css/*.css",
+        "./src/js/*.js",
         "./bundle/*.js"
       ],
       server: { baseDir: ["./"] }
