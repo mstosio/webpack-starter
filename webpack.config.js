@@ -1,11 +1,11 @@
 const path = require("path");
 const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
-var HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin'); 
 
 module.exports = {
   entry: {
-    index: "./src/js/index.js" // if u want to add another js file just add new line
+    index: "./src/js/index.js",
+    vendor: "./src/js/vendor.js" // if u want to add another js file just add new line
   },
   devServer: {
     contentBase: "./"
@@ -21,10 +21,6 @@ module.exports = {
             presets: ["@babel/preset-env"]
           }
         }
-      },
-      {
-        test: /\.scss$/,
-        use: ["style-loader", "css-loader", "resolve-url-loader", "sass-loader"] // those take care of loading css and putting styles into head
       },
       {
         test: /\.html$/,
@@ -55,9 +51,6 @@ module.exports = {
         "./bundle/*.js"
       ],
       server: { baseDir: ["./"] }
-    }),
-    new HtmlWebpackPlugin({
-      template: "index.html"
     }),
     new CleanWebpackPlugin(),
   ]
